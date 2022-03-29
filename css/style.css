@@ -93,6 +93,11 @@ li {
   font-size: 11px;
 }
 
+.logo__img {
+  margin-top: 10px;
+  height: 40px;
+}
+
 .telephone {
   -webkit-box-flex: 1;
   -ms-flex: 1;
@@ -515,6 +520,8 @@ li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  z-index: 1000;
 }
 
 .reviews {
@@ -573,12 +580,6 @@ li {
   color: silver;
   text-align: center;
 }
-
-/*
-
-
-
-*/
 
 .slider {
   width: 100%;
@@ -659,7 +660,7 @@ li {
 
 .price__title {
   color: #caa53e;
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
 }
 
@@ -694,6 +695,10 @@ li {
   padding: 10px 0;
 }
 
+.price-content__price {
+  white-space: nowrap;
+}
+
 .price-content__text {
   color: #cdcdcd;
   text-align: justify;
@@ -702,8 +707,9 @@ li {
 
 .sauna-name {
   position: relative;
-  top: -110px;
+  top: -300px;
   z-index: 100;
+  margin: 0 40px;
 }
 
 .sauna-name__items {
@@ -737,6 +743,7 @@ li {
 
 .sauna-about__title {
   color: #caa53e;
+  margin-bottom: 10px;
 }
 
 .sauna-about__title::after {
@@ -746,16 +753,20 @@ li {
 
 .sauna-about__work {
   color: #caa53e;
+  margin-bottom: 10px;
 }
 
 .sauna-about__tel {
   color: #caa53e;
+  margin-bottom: 10px;
+  display: inline-block;
 }
 
 .sauna-about__link {
   display: block;
   color: white;
   text-decoration: none;
+  margin-bottom: 10px;
 }
 
 .sauna-about__warning {
@@ -1013,6 +1024,10 @@ li {
   color: #caa53e;
 }
 
+.present-content__rules {
+  padding-left: 10px;
+}
+
 .present-content__rule {
   margin-bottom: 10px;
 }
@@ -1032,6 +1047,24 @@ li {
   max-width: 100%;
 }
 
+@supports (-webkit-appearance:none) {
+  body {
+    background: url(../img/bg_dark.webp);
+  }
+
+  .slider-1 .slick-arrow.slick-prev {
+    background: url(../img/icon/left.svg) no-repeat center;
+  }
+
+  .slider-1 .slick-arrow.slick-next {
+    background: url(../img/icon/right.svg) no-repeat center;
+  }
+
+  .about {
+    background: fixed url(../img/cta-bg1.webp);
+  }
+}
+
 @media (min-width: 850px) {
   .menu__items--scroll {
     position: fixed;
@@ -1048,6 +1081,10 @@ li {
     transform: translateX(-50%);
     background-color: rgba(0, 0, 0, 0.8);
   }
+
+@supports (-webkit-appearance:none) {
+
+}
 }
 
 @media (max-width: 900px) {
@@ -1062,13 +1099,13 @@ li {
     flex-direction: column;
   }
 
-  .sauna-name {
-    top: -110px;
-  }
-
   .kitchen__items {
     grid-template-columns: repeat(2, 1fr);
   }
+
+@supports (-webkit-appearance:none) {
+
+}
 }
 
 @media (max-width: 850px) {
@@ -1147,6 +1184,10 @@ li {
     display: block;
     background-color: transparent;
   }
+
+@supports (-webkit-appearance:none) {
+
+}
 }
 
 @media (max-width: 770px) {
@@ -1160,6 +1201,20 @@ li {
   .social {
     display: none;
   }
+
+@supports (-webkit-appearance:none) {
+
+}
+}
+
+@media (max-width: 768px) {
+  .telephone {
+    padding-top: 10px;
+  }
+
+@supports (-webkit-appearance:none) {
+
+}
 }
 
 @media (max-width: 750px) {
@@ -1169,12 +1224,20 @@ li {
     -ms-flex-direction: column;
     flex-direction: column;
   }
+
+@supports (-webkit-appearance:none) {
+
+}
 }
 
 @media (max-width: 700px) {
   .kitchen__items {
     grid-template-columns: 1fr;
   }
+
+@supports (-webkit-appearance:none) {
+
+}
 }
 
 @media (max-width: 640px) {
@@ -1184,17 +1247,34 @@ li {
 
   .about-page-1 {
     padding: 10px 0;
+    top: 20%;
   }
-}
 
-@media (max-width: 600px) {
-  .sauna-name {
-    top: -160px;
-  }
+@supports (-webkit-appearance:none) {
+
+}
 }
 
 @media (max-width: 500px) {
+  .about-page-1__text {
+    font-size: 15px;
+  }
+
   .sauna-name {
+    top: -350px;
+  }
+
+@supports (-webkit-appearance:none) {
+
+}
+}
+
+@media (max-width: 360px) {
+  .about-page-1__text {
     display: none;
   }
+
+@supports (-webkit-appearance:none) {
+
+}
 }
