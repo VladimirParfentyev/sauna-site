@@ -1075,7 +1075,7 @@ li {
     width: 100%;
     max-width: 1170px;
     padding: 20px;
-    z-index: 1000;
+    z-index: 1001;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
